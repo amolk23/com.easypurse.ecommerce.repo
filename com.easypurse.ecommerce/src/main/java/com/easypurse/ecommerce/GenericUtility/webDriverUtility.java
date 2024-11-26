@@ -81,7 +81,7 @@ public class webDriverUtility {
 	
 	public void clickAction(WebDriver driver, WebElement ele) {
 		Actions act = new Actions(driver);
-		act.click(ele);
+		act.click(ele).build().perform();;
 		
 	}
 	

@@ -40,7 +40,7 @@ public class HomePage extends webDriverUtility {
 	@FindBy(xpath = "//a[.='My Cart']")
 	private WebElement MyCartLinkTxt;
 	
-	@FindBy(linkText = "Login")
+	@FindBy(xpath = "//h2[text()='Shopping']/ancestor::header[@class='header-style-1']/descendant::a[text()='Login']")
 	private WebElement LoginLinkTxt;
 	
 	@FindBy(linkText = "Admin Login")

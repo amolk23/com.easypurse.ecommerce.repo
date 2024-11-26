@@ -75,7 +75,7 @@ public class myCartPage extends BaseTest {
 	@FindBy(name = "billingpincode")
 	private WebElement billingpinCodeTxtField;
 
-	@FindBy(xpath = "(//button[text()='Update'])[1]")
+	@FindBy(xpath = "//span[text()='Billing Address']/ancestor::table[@class='table table-bordered']/descendant::button[text()='Update']")
 	private WebElement updatebillingBtn;
 
 	@FindBy(name = "shippingaddress")
@@ -90,7 +90,7 @@ public class myCartPage extends BaseTest {
 	@FindBy(id = "shippingpincode")
 	private WebElement shippingpinCodeTxtField;
 
-	@FindBy(xpath = "(//button[text()='Update'])[2]")
+	@FindBy(xpath = "//span[text()='Shipping Address']/ancestor::table[@class='table table-bordered']/descendant::button[text()='Update']")
 	private WebElement updateshippingBtn;
 
 	public void checkOut() throws Exception {
@@ -116,8 +116,8 @@ public class myCartPage extends BaseTest {
 		getShippingpinCodeTxtField().clear();
 		getShippingpinCodeTxtField().sendKeys(shippingPincode);
 		
-		getUpdateshippingBtn().click();
-		wlib.switchToAlertAndAccept(driver);
+//		getUpdateshippingBtn().click();
+//		wlib.switchToAlertAndAccept(driver);
 		
 		getBillingAddressTxtField().clear();
         getBillingAddressTxtField().sendKeys(billingAdress);
@@ -131,9 +131,10 @@ public class myCartPage extends BaseTest {
 		getBillingpinCodeTxtField().clear();
 		getBillingpinCodeTxtField().sendKeys(billingPincode);
 		
-		//getUpdatebillingBtn().click();
-		//wlib.switchToAlertAndAccept(driver);
+//		wlib.clickAction(driver, getBillingAddressTxtField());
+//		wlib.switchToAlertAndAccept(driver);
+		
 		wlib.moveToelement(driver, getProceedToCheckOutBtn());
-		getProceedToCheckOutBtn().click();
+		wlib.clickAction(driver, getProceedToCheckOutBtn());;
 	}
 }

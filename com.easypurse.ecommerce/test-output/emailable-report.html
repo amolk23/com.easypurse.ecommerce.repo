@@ -9,42 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">46,846</td><td>RegressionTest</td><td></td></tr>
+<tr><td><a href="#t0">Test1</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">17,150</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Test2</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">34,069</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">7</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">51,219</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.easypurse.ecommerce.UserModule.User</td><td><a href="#m0">VerifyTheCheckOutProcess</a></td><td rowspan="1">1732594857049</td><td rowspan="1">15629</td></tr><tr class="failedeven"><td><a href="#m1">verifyWishlistAfterLogout</a></td><td rowspan="1">1732594872864</td><td rowspan="1">16000</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.easypurse.ecommerce.AdminModule.Admin</td><td><a href="#m2">createCategoryTest</a></td><td rowspan="1">1732594892246</td><td rowspan="1">4479</td></tr><tr class="passedeven"><td><a href="#m3">createSubCategoryTest</a></td><td rowspan="1">1732594896736</td><td rowspan="1">2817</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.easypurse.ecommerce.AdminModule.Admin</td><td><a href="#m0">adminLogin</a></td><td rowspan="1">1732625522390</td><td rowspan="1">4058</td></tr><tr class="passedeven"><td><a href="#m1">createCategoryTest</a></td><td rowspan="1">1732625526458</td><td rowspan="1">4119</td></tr><tr class="passedeven"><td><a href="#m2">createSubCategoryTest</a></td><td rowspan="1">1732625530582</td><td rowspan="1">3511</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Test2 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">com.easypurse.ecommerce.UserModule.User</td><td><a href="#m3">UserLogin</a></td><td rowspan="1">1732625522346</td><td rowspan="1">4435</td></tr><tr class="passedeven"><td><a href="#m4">VerifyTheCheckOutProcess</a></td><td rowspan="1">1732625526794</td><td rowspan="1">15432</td></tr><tr class="passedeven"><td><a href="#m5">verifyUserAbleToCreateAccount</a></td><td rowspan="1">1732625542264</td><td rowspan="1">2208</td></tr><tr class="passedeven"><td><a href="#m6">verifyWishlistAfterLogout</a></td><td rowspan="1">1732625544472</td><td rowspan="1">6967</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.easypurse.ecommerce.UserModule.User#VerifyTheCheckOutProcess</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at com.easypurse.ecommerce.UserModule.User.VerifyTheCheckOutProcess(User.java:111)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.easypurse.ecommerce.UserModule.User#verifyWishlistAfterLogout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#exampleInputPassword1&quot;}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0e6602c54a2a4d800943d13495778d37, findElement {value=exampleInputPassword1, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50401}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50401/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0e6602c54a2a4d800943d13495778d37
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy21.sendKeys(Unknown Source)
-	at com.easypurse.ecommerce.ObjectRepo.UserLoginPage.userLogin(UserLoginPage.java:95)
-	at com.easypurse.ecommerce.UserModule.User.verifyWishlistAfterLogout(User.java:53)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.easypurse.ecommerce.AdminModule.Admin#createCategoryTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.easypurse.ecommerce.AdminModule.Admin#createSubCategoryTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test1</h2><h3 id="m0">com.easypurse.ecommerce.AdminModule.Admin#adminLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.easypurse.ecommerce.AdminModule.Admin#createCategoryTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.easypurse.ecommerce.AdminModule.Admin#createSubCategoryTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test2</h2><h3 id="m3">com.easypurse.ecommerce.UserModule.User#UserLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.easypurse.ecommerce.UserModule.User#VerifyTheCheckOutProcess</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.easypurse.ecommerce.UserModule.User#verifyUserAbleToCreateAccount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.easypurse.ecommerce.UserModule.User#verifyWishlistAfterLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

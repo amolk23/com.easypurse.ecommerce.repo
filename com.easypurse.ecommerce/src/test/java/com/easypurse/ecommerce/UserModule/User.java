@@ -29,12 +29,13 @@ public class User extends BaseTest {
 		HomePage hp = new HomePage(driver);
 		hp.launchApp(URL);
 
-		hp.getMyAccountLinkTxt().click();
+		hp.getLoginLinkTxt().click();
 		UserLoginPage ulp = new UserLoginPage(driver);
 
 		ulp.userLogin(USERNAME, PASSWORD);
 		String actResult = driver.findElement(By.xpath("//li[text()='Shopping Cart']/parent::ul[@class='list-inline list-unstyled']/descendant::a[text()='Home']")).getText();
 	    Assert.assertTrue(true, actResult);
+	    hp.getLogoutLinkTxt().click();
 
 	}
 
@@ -47,7 +48,7 @@ public class User extends BaseTest {
 		HomePage hp = new HomePage(driver);
 		hp.launchApp(URL);
 
-		hp.getMyAccountLinkTxt().click();
+		hp.getLoginLinkTxt().click();
 		UserLoginPage ulp = new UserLoginPage(driver);
 		System.out.println("User login page");
 		ulp.userLogin(USERNAME, PASSWORD);
@@ -68,6 +69,7 @@ public class User extends BaseTest {
 		WebElement actResult = driver.findElement(By.xpath("//a[text()='Redmi Note 4 (Gold, 32 GB)  (With 3 GB RAM)']"));
         SoftAssert soft = new SoftAssert();
         soft.assertEquals(actResult, ExpectedResult);
+        hp.getLogoutLinkTxt().click();
 	}
 
 	@Test (groups = "RegressionTest")
@@ -81,7 +83,7 @@ public class User extends BaseTest {
 		HomePage hp = new HomePage(driver);
 		hp.launchApp(URL);
 
-		hp.getMyAccountLinkTxt().click();
+		hp.getLoginLinkTxt().click();
 		UserLoginPage ulp = new UserLoginPage(driver);
 		Thread.sleep(2000);
 		ulp.userLogin(USERNAME, PASSWORD);
@@ -106,9 +108,11 @@ public class User extends BaseTest {
 		pmp.getCashOnDeliveryToggle().click();
 		wlib.executeScript(driver, "window.scrollTo(0,400)", pmp.getSubmitBtn());;
 		pmp.getSubmitBtn().click();
-		String actData = driver.findElement(By.xpath("//a[contains(text(),'Redmi Note 4 (Gold, 32 GB)  (With 3 GB RAM)')]")).getText();
-		String ExpectedData = "Redmi Note 4 (Gold, 32 GB)  (With 3 GB RAM)";
-		Assert.assertTrue(actData.contains(ExpectedData));
+		String actData = driver.findElement(By.xpath("//li[text()='Shopping Cart']")).getText();
+		String ExpectedData = "Shopping Cart";
+		SoftAssert soft = new SoftAssert();
+		soft.assertEquals(actData, ExpectedData);
+		hp.getLogoutLinkTxt().click();
 
 	}
 

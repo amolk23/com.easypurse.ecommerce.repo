@@ -33,12 +33,12 @@ public class BaseTest {
 		dlib.getConnection();
 	}
     
-	@Parameters("browser")
+	@Parameters("BROWSER")
 	@BeforeClass(alwaysRun = true)
 	public void ConfigBC(@Optional("chrome") String browser) throws Exception {
 		//launch browser
 	 String BROWSER = flib.getDataFromPropertyFile("browser");
-	// String BROWSER = System.getProperty("browser");
+	 //String BROWSER = System.getProperty("browser");
 	 System.out.println("Browser:"+BROWSER);
 	 if (BROWSER.equals("chrome")) {
 	    driver = new ChromeDriver();
@@ -68,7 +68,7 @@ public class BaseTest {
 	@AfterClass(alwaysRun = true)
 	public void configAC() {
 		//close the browser
-		driver.close();
+		driver.quit();
 	}
 	
 	
